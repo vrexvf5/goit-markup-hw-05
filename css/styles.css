@@ -236,7 +236,7 @@ button {
 
 .hero-button:hover, 
 .hero-button:focus {
-    background-color: #188CE8;;
+    background-color: #188CE8;
 }
 
 /* FEATURES */
@@ -551,6 +551,10 @@ footer {
     margin-top: 20px;
 }
 
+.footer-social-media-tab .icon {
+    fill: #ffffff;
+}
+
 .footer-social-media-tab .link {
     fill: var(--white-text-color);
     background-color: rgba(255, 255, 255, 0.1);
@@ -682,16 +686,14 @@ footer {
     height: 100%;
     z-index: 100;
     background-color: rgba(0, 0, 0, 0.2);
+
+    transition: opacity 500ms linear, visibility 500ms linear;
 }
 
 .modal-backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
     pointer-events: none;
-}
-
-.modal-backdrop.is-hidden .modal-window {
-    transform: translate(-50%, -50%) scale(0);
 }
 
 .modal-window {
@@ -724,6 +726,10 @@ footer {
     padding: 0;
 }
 
-.modal-window-button:active .modal-window {
+.hero-button:active .modal-window {
     transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-window-button:active .modal-window {
+    transform: translate(-50%, -50%) scale(0);
 }
